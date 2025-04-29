@@ -48,9 +48,9 @@ pipeline{
             steps{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
-                       sh "docker build -t amazon-prime-video ."
-                       sh "docker tag amazon-prime-video pramesh1994/amazon-prime-video:latest "
-                       sh "docker push pramesh1994/amazon-prime-video:latest "
+                       sh "sudo docker build -t amazon-prime-video ."
+                       sh "sudo docker tag amazon-prime-video pramesh1994/amazon-prime-video:latest "
+                       sh "sudo docker push pramesh1994/amazon-prime-video:latest "
                     }
                 }
             }
